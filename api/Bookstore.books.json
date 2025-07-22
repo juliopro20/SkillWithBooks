@@ -1,0 +1,164 @@
+[ 
+  {
+    "title": "Get Started With Angular 20",
+    "isbn13": "9781912047451",
+    "price": "Free",
+    "image": "data:image/png;base64,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",
+    "url": "https://angular.dev"
+  },
+  {
+    "title": "An Introduction to Node.js",
+    "isbn13": "9781912047451",
+    "price": "Free",
+    "image": "data:image/png;base64,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",
+    "url": "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs"
+  },
+  {
+    "title": "An Introduction to mongoDB Database",
+    "isbn13": "9781912047451",
+    "price": "$14.92",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3TqStfKDtmGzs404YG7_j5xSMReY1kSmVeg&s",
+    "url": "https://www.mongodb.com/books/an-introduction-to-c-and-gui-programming-2nd-edition"
+  },
+
+  {
+    "title": "An Introduction to C & GUI Programming, 2nd Edition",
+    "isbn13": "9781912047451",
+    "price": "$14.92",
+    "image": "https://itbook.store/img/books/9781912047451.png",
+    "url": "https://itbook.store/books/9781912047451"
+  },
+  {
+    "title": "Snowflake: The Definitive Guide",
+    "isbn13": "9781098103828",
+    "price": "$58.90",
+    "image": "https://itbook.store/img/books/9781098103828.png",
+    "url": "https://itbook.store/books/9781098103828"
+  },
+  {
+    "title": "Python for Data Analysis, 3rd Edition",
+    "isbn13": "9781098104030",
+    "price": "$36.18",
+    "image": "https://itbook.store/img/books/9781098104030.png",
+    "url": "https://itbook.store/books/9781098104030"
+  },
+  {
+    "title": "Reliable Machine Learning",
+    "isbn13": "9781098106225",
+    "price": "$43.99",
+    "image": "https://itbook.store/img/books/9781098106225.png",
+    "url": "https://itbook.store/books/9781098106225"
+  },
+  {
+    "title": "Data Visualization with Python and JavaScript, 2nd Edition",
+    "isbn13": "9781098111878",
+    "price": "$60.99",
+    "image": "https://itbook.store/img/books/9781098111878.png",
+    "url": "https://itbook.store/books/9781098111878"
+  },
+  {
+    "title": "Learning Microsoft Power BI",
+    "isbn13": "9781098112844",
+    "price": "$40.46",
+    "image": "https://itbook.store/img/books/9781098112844.png",
+    "url": "https://itbook.store/books/9781098112844"
+  },
+  {
+    "title": "C++ Software Design",
+    "isbn13": "9781098113162",
+    "price": "$47.03",
+    "image": "https://itbook.store/img/books/9781098113162.png",
+    "url": "https://itbook.store/books/9781098113162"
+  },
+  {
+    "title": "Terraform: Up and Running, 3rd Edition",
+    "isbn13": "9781098116743",
+    "price": "$41.99",
+    "image": "https://itbook.store/img/books/9781098116743.png",
+    "url": "https://itbook.store/books/9781098116743"
+  },
+  {
+    "title": "Flutter and Dart Cookbook",
+    "isbn13": "9781098119515",
+    "price": "$50.52",
+    "image": "https://itbook.store/img/books/9781098119515.png",
+    "url": "https://itbook.store/books/9781098119515"
+  },
+  {
+    "title": "Python Data Science Handbook, 2nd Edition",
+    "isbn13": "9781098121228",
+    "price": "$56.16",
+    "image": "https://itbook.store/img/books/9781098121228.png",
+    "url": "https://itbook.store/books/9781098121228"
+  },
+  {
+    "title": "Raspberry Pi Cookbook, 4th Edition",
+    "isbn13": "9781098130923",
+    "price": "$14.99",
+    "image": "https://itbook.store/img/books/9781098130923.png",
+    "url": "https://itbook.store/books/9781098130923"
+  },
+  {
+    "title": "Azure Maps Using Blazor Succinctly",
+    "isbn13": "9781642002263",
+    "price": "$0.00",
+    "image": "https://itbook.store/img/books/9781642002263.png",
+    "url": "https://itbook.store/books/9781642002263"
+  },
+  {
+    "title": "Full Stack Quarkus and React",
+    "isbn13": "9781800562738",
+    "price": "$39.99",
+    "image": "https://itbook.store/img/books/9781800562738.png",
+    "url": "https://itbook.store/books/9781800562738"
+  },
+  {
+    "title": "Mathematics for Game Programming and Computer Graphics",
+    "isbn13": "9781801077330",
+    "price": "$49.99",
+    "image": "https://itbook.store/img/books/9781801077330.png",
+    "url": "https://itbook.store/books/9781801077330"
+  },
+  {
+    "title": "Architecting and Building High-Speed SoCs",
+    "isbn13": "9781801810999",
+    "price": "$32.99",
+    "image": "https://itbook.store/img/books/9781801810999.png",
+    "url": "https://itbook.store/books/9781801810999"
+  },
+  {
+    "title": "Web Development with Julia and Genie",
+    "isbn13": "9781801811132",
+    "price": "$39.99",
+    "image": "https://itbook.store/img/books/9781801811132.png",
+    "url": "https://itbook.store/books/9781801811132"
+  },
+  {
+    "title": "Java Memory Management",
+    "isbn13": "9781801812856",
+    "price": "$34.99",
+    "image": "https://itbook.store/img/books/9781801812856.png",
+    "url": "https://itbook.store/books/9781801812856"
+  },
+  {
+    "title": "Test-Driven Development with C++",
+    "isbn13": "9781803242002",
+    "price": "$44.99",
+    "image": "https://itbook.store/img/books/9781803242002.png",
+    "url": "https://itbook.store/books/9781803242002"
+  },
+  {
+    "title": "Software Test Design",
+    "isbn13": "9781804612569",
+    "price": "$44.99",
+    "image": "https://itbook.store/img/books/9781804612569.png",
+    "url": "https://itbook.store/books/9781804612569"
+  },
+  {
+    "title": "Microservices with Go",
+    "isbn13": "9781804617007",
+    "price": "$29.99",
+    "image": "https://itbook.store/img/books/9781804617007.png",
+    "url": "https://itbook.store/books/9781804617007"
+  }
+]

@@ -1,0 +1,69 @@
+<nav
+  class="w-full flex justify-between items-center p-5 bg-indigo-500"
+  style="position: fixed; top: 0; z-index: 100"
+>
+  <div class="logo">
+    <span class="text-gray-200 text-4xl flec justify-start items-center"
+      >SkillWithBooks</span
+    >
+  </div>
+
+  <div *ngIf="isLoggedIn()" class="search relative">
+    <span class="absolute mt-1.5 mx-3"
+      ><i class="fa fa-search" aria-hidden="true"></i
+    ></span>
+
+    <input
+      type="text"
+      placeholder="Search Book"
+      [(ngModel)]="searchTerm"
+      class="w-96 p-2 pl-9 rounded rounded-r-none text-gray-600"
+      style="background-color: white"
+      (input)="onSearch()"
+    />
+    <button
+      class="bg-stale-400 p-2 rounded-r text-white outline-none outline-0"
+      style="background-color: slategray"
+    >
+      Search
+    </button>
+  </div>
+
+  <div class="nav-items">
+    <ng-container *ngIf="!isLoggedIn()">
+      <span
+        routerLink="/"
+        class="text-xl cursor-pointer text-gray-200 font-bold m-3 hover:underline"
+        >Landing Page</span
+      >
+      <span
+        routerLink="/login"
+        class="text-xl cursor-pointer text-gray-200 font-bold m-3 hover:underline"
+        >Login</span
+      >
+      <span
+        routerLink="/register"
+        class="text-xl cursor-pointer text-gray-200 font-bold m-3 hover:underline"
+        >Register</span
+      >
+    </ng-container>
+
+    <ng-container *ngIf="isLoggedIn()">
+      <span
+        routerLink="/home"
+        class="text-xl cursor-pointer text-gray-200 font-bold m-3 hover:underline"
+        >Home</span
+      >
+      <span
+        routerLink="/profile"
+        class="text-xl cursor-pointer text-gray-200 font-bold m-3 hover:underline"
+        >Profile</span
+      >
+      <span
+        (click)="logout()"
+        class="text-xl cursor-pointer text-gray-200 font-bold m-3 hover:underline"
+        >Logout</span
+      >
+    </ng-container>
+  </div>
+</nav>
