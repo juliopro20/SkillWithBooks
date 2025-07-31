@@ -46,6 +46,15 @@ private isTokenExpired(token: string): boolean {
 private decodeToken(token: string): any {
     return JSON.parse(atob(token.split('.')[1])); // Decode JWT token
 }
+
+  getUserId(): string | null {
+    const token = localStorage.getItem('token');
+    if (token) {
+      const payload = JSON.parse(atob(token.split('.')[1]));
+      return payload.id; // Adjust according to your token structure
+    }
+    return null;
+  }
   private storeAuthToken(token: string): void {
       localStorage.setItem(this.authTokenKey, token); // Store token in local storage
   }

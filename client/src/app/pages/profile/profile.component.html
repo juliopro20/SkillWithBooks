@@ -1,0 +1,27 @@
+<div *ngIf="!user; else profileContent">Loading...</div>
+<ng-template #profileContent>
+  <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden mt-10">
+    <div class="flex flex-col items-center p-6">
+      <img 
+          class="w-32 h-32 rounded-full object-cover border-4 border-indigo-500 shadow-lg mb-4"
+          [src]="user.profileImage || 'https://via.placeholder.com/150'"
+          alt="Profile Image"
+      />
+      <h2 class="text-2xl font-bold text-gray-800 mb-1">
+          {{ user.firstName }} {{ user.lastName }}
+      </h2>
+      <p class="text-indigo-600 font-medium mb-2">{{ user.userName }}</p>
+      <div class="w-full border-t border-gray-200 my-4"></div>
+      <div class="w-full flex flex-col gap-2">
+          <div class="flex items-center">
+              <span class="w-28 text-gray-600 font-semibold">Email:</span>
+              <span class="text-gray-800">{{ user.email }}</span>
+          </div>
+          <div class="flex items-center">
+              <span class="w-28 text-gray-600 font-semibold">User ID:</span>
+              <span class="text-gray-800">{{ user._id }}</span>
+          </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

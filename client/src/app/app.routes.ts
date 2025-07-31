@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { authGuard } from './auth.guard'; 
+import { ProfileComponent } from './pages/profile/profile.component';
 
 export const routes: Routes = [
     { path: '', loadComponent: () => import('./pages/landingpage/landingpage.component') },
@@ -10,6 +11,11 @@ export const routes: Routes = [
     {
         path: 'home',
         loadComponent: () => import('./pages/home/home.component'),
+        canActivate: [authGuard]  // Protecting this route
+    },
+    {
+        path: 'profile/:id',
+        component: ProfileComponent,
         canActivate: [authGuard]  // Protecting this route
     },
     { path: '**', redirectTo: '' } // Redirect unknown paths to landing page

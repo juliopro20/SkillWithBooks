@@ -16,7 +16,10 @@ const port = 3000;
 
 app.use(express.json());// Middleware to parse JSON bodies
 app.use(cookieParser())
-app.use(cors())
+app.use(cors({
+    origin: 'http://localhost:4200', // Adjust to your frontend URL
+    credentials: true,
+}));
 
 app.use('/api/role', roleRoute);// Importing the role route
 app.use('/api/auth', authRoute);// Importing the auth route
