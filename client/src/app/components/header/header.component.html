@@ -1,0 +1,43 @@
+<nav class="w-full flex justify-between items-center p-5 bg-indigo-500 fixed top-0 z-100">
+  <div class="logo">
+    <span class="text-gray-200 text-4xl flec justify-start items-center"
+      >SkillWithBooks</span
+    >
+  </div>
+
+
+  <div class="nav-items">
+    <ng-container *ngIf="!isLoggedIn()">
+      <span
+        routerLink="/"
+        class="text-xl cursor-pointer text-gray-200 font-bold m-3 hover:underline"
+        >Landing Page</span
+      >
+      <span
+        routerLink="/login"
+        class="text-xl cursor-pointer text-gray-200 font-bold m-3 hover:underline"
+        >Login</span
+      >
+      <span
+        routerLink="/register"
+        class="text-xl cursor-pointer text-gray-200 font-bold m-3 hover:underline"
+        >Register</span
+      >
+    </ng-container>
+
+    <ng-container *ngIf="isLoggedIn()">
+  <span
+    routerLink="/home"
+    class="text-xl cursor-pointer text-gray-200 font-bold m-3 hover:underline"
+  >Home</span>
+  <span
+    [routerLink]="['/profile', getUserId()]"
+    class="text-xl cursor-pointer text-gray-200 font-bold m-3 hover:underline"
+  >Profile</span>
+  <span
+    (click)="logout()"
+    class="text-xl cursor-pointer text-gray-200 font-bold m-3 hover:underline"
+  >Logout</span>
+</ng-container>
+  </div>
+</nav>

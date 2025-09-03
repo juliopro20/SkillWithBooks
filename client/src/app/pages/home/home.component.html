@@ -1,0 +1,68 @@
+<h4 class="text-4xl text-center mt-24 font-bold">Welcome to SkillWithBooks</h4>
+
+<p class="text-center text-gray-600 mt-4">Explore our collection of books</p>
+
+<div class="search relative" style="text-align: center">
+  <span class="absolute mt-1.5 mx-3">
+    <i class="fa fa-search" aria-hidden="true"></i>
+  </span>
+  <input
+    type="text"
+    placeholder="Search Book"
+    [(ngModel)]="searchTerm"
+    class="w-96 p-2 pl-9 rounded rounded-r-none text-gray-600"
+    style="background-color: white"
+    (input)="onSearch()"
+  />
+  <button
+    class="bg-stale-400 p-2 rounded-r text-white outline-none outline-0"
+    style="background-color: slategray"
+    (click)="onSearch()"
+  >
+    Search
+  </button>
+
+  <div class="container mx-auto px-4 py-8">
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8"
+    >
+      <div
+        *ngFor="let book of filteredBooks"
+        class="relative w-full flex flex-col my-6 bg-white shadow-lg border border-slate-200 rounded-lg max-w-sm mx-auto overflow-hidden"
+      >
+        <div
+          class="relative h-56 m-2.5 overflow-hidden rounded-md flex items-center justify-center bg-gray-100"
+        >
+          <img
+            [src]="book.image"
+            [alt]="book.title"
+            class="object-cover h-full w-full rounded-md"
+          />
+        </div>
+        <div class="p-4 flex flex-col flex-grow">
+          <h6
+            class="mb-2 text-slate-800 text-xl font-semibold overflow-hidden text-ellipsis whitespace-nowrap"
+            title="{{ book.title }}"
+          >
+            {{ book.title }}
+          </h6>
+          <p
+            class="text-slate-600 leading-normal font-light mb-auto line-clamp-3"
+          >
+            <strong>Price:</strong> {{ book.price }}<br />
+            <strong>ISBN:</strong> {{ book.isbn13 }}
+          </p>
+        </div>
+        <div class="px-4 pb-4 pt-0 mt-2">
+          <a
+            (click)="markAsRead(book)"
+            [href]="book.url"
+            target="_blank"
+            class="inline-block w-full rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700"
+            >View Details</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
